@@ -1,45 +1,20 @@
-import java.util.*;
-
-public class BubbleSort{
-	public static void main(String []args)
+import java.util.Scanner;
+public class Fibonacci 
 {
-	int n;
-	Scanner s = new Scanner(System.in);
-	System.out.println("Enter the size");
-	n = s.nextInt();
-
-	int arr[] = new int[n];
-	System.out.println("Enter the numbers ");
-	for(int i=0;i<n;i++)
-	{
-		arr[i] = s.nextInt();
-	}
-
-	System.out.println("Before Sorting");
-	for(int i=0;i<n;i++)
-	{
-		System.out.print(arr[i] + " ");
-	}
-	
-	System.out.println(" ");
-	System.out.println("After Sorting");
-	int temp;
-	for(int i=0;i<n-1;i++)
-	{
-		for(int j=0;j<n-i-1;j++)
-		{
-			if(arr[j]>arr[j+1])
-			{
-				temp = arr[j];
-				arr[j] = arr[j+1];
-				arr[j+1] = temp;
-			}
-		}
-	}
-
-	for(int i=0;i<n;i++)
-	{
-		System.out.print(arr[i] + " ");
-	}
+    public static void main(String[] args) 
+    {
+        int n, a = 0, b = 0, c = 1;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter value of n:");
+        n = s.nextInt();
+        System.out.print("Fibonacci Series:");
+        for(int i = 1; i <= n; i++)
+        {
+            a = b;
+            b = c;
+            c = a + b;
+            System.out.print(a+" ");
+        }
+    }
 }
-}
+Program Explanation
